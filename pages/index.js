@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
-import Calendar from "../components/calendar";
 import Event from "../components/event";
 import NewEvent from "../components/newEvent";
 
