@@ -46,13 +46,15 @@ export default function EventForm({ event }) {
       onSubmit={updateEvent}
       initialValues={fields}
       render={({ handleSubmit }) => (
-        <form onSubmit={handleSubmit}>
+        <form style={{ margin: "24px 0px 24px 0px" }} onSubmit={handleSubmit}>
           <h2>Update Event</h2>
           <div>
             <label>Event Name</label>
             <Field name="summary" component="input" value={fields.summary} />
           </div>
-          <button type="submit">Submit</button>
+          <button style={{ marginTop: "8px" }} type="submit">
+            Submit
+          </button>
         </form>
       )}
     />

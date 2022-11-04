@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { DateTime } from "luxon";
 import axios from "axios";
+import Button from "@mui/material/Button";
 import { Form, Field, useForm } from "react-final-form";
 import {
   useMutation,
@@ -55,13 +56,15 @@ export default function NewEvent() {
     <Form
       onSubmit={addEvent}
       render={({ handleSubmit }) => (
-        <form onSubmit={handleSubmit}>
+        <form style={{ marginTop: "24px" }} onSubmit={handleSubmit}>
           <h2>New Event</h2>
           <div>
-            <label>Event Name</label>
+            <label style={{ marginRight: "8px" }}>Event Name</label>
             <Field name="summary" component="input" placeholder="Event Name" />
           </div>
-          <button type="submit">Submit</button>
+          <Button size="small" style={{ marginTop: "8px" }} type="submit">
+            Submit
+          </Button>
         </form>
       )}
     />

@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import { AdapterLuxon } from "@mui/x-date-pickers/AdapterLuxon";
+import Container from "@mui/material/Container";
 import Event from "../components/event";
 import NewEvent from "../components/newEvent";
+import Divider from "@mui/material/Divider";
 
 import axios from "axios";
 
@@ -41,9 +43,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>Calendar App</h1>
-        {data && data.map((event, i) => <Event key={i} event={event} />)}
-        <NewEvent />
+        <Container>
+          <h1>Calendar App</h1>
+          {data && data.map((event, i) => <Event key={i} event={event} />)}
+          <Divider variant="middle" />
+          <NewEvent />
+        </Container>
       </main>
     </div>
   );
