@@ -5,6 +5,7 @@ import Container from "@mui/material/Container";
 import Event from "../components/event";
 import NewEvent from "../components/newEvent";
 import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
 
 import axios from "axios";
 
@@ -45,6 +46,14 @@ export default function Home() {
       <main>
         <Container>
           <h1>Calendar App</h1>
+          <Link
+            href={
+              "https://calendar.google.com/calendar/u/0/embed?src=076505a01a2e082fd52dc02e70a59bb22735e7cf6ab07193800533d2a97cdd6f@group.calendar.google.com&ctz=America/North_Dakota/Center"
+            }
+            target="_blank"
+          >
+            Link to Google Calendar
+          </Link>
           {data && data.map((event, i) => <Event key={i} event={event} />)}
           <Divider variant="middle" />
           <NewEvent />
